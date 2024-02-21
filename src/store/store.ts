@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
-import counterSlice  from './features/counter/counterslice'
+import counterSlice  from '../features/counter/counterslice'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
+import modalSlice from '../features/modal'
 
 
 export const store = configureStore({
     reducer: {
         counter: counterSlice.reducer,
+        modal: modalSlice.reducer,
     }
 })
 

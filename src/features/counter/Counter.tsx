@@ -4,7 +4,7 @@ import {
   increment,
   incrementByAmount,
 } from './counterslice.ts';
-import { useAppDispatch, useAppSelector } from '../../store.ts';
+import { useAppDispatch, useAppSelector } from '../../store/store.ts';
 import { Button } from 'semantic-ui-react';
 
 
