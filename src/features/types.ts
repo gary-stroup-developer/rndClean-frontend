@@ -15,3 +15,7 @@ type modalState = {
     open: boolean
     dimmer: string
 }
+
+type SidebarProps = {
+    visible: boolean,
+}
