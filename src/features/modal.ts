@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState: modalState = {
     open: false,
-    dimmer: "",
+    dimmer: "blurring",
 }
 
 const modalSlice = createSlice({
