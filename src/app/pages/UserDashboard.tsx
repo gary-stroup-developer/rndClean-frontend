@@ -7,6 +7,7 @@ import {
     MenuItemProps,
     GridColumn,
     Grid,
+    Button,
 } from 'semantic-ui-react';
 import NavBar from "../components/NavBar";
 import { useAppSelector } from "../../store/store";
@@ -55,6 +56,7 @@ const UserDashboard = () => {
                     <Segment textAlign="center" basic>
                         <h1>Balance Due</h1>
                         <h1>$0</h1>
+                        <Button color="teal" content="Pay Now" compact size="small" />
                     </Segment>
                     <Segment textAlign="center" basic>
                         <h1>Upcoming Appointments</h1>

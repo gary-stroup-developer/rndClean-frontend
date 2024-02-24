@@ -8,7 +8,7 @@ const Invoices = () => {
       <div>
           <NavBar loggedIn={true} />
           <Header className="header-bg" as={'h1'} style={{marginBottom: "2rem"}}>Invoices</Header>
-          <Grid stretched relaxed padded>
+          <Grid stretched relaxed="very" padded>
               <GridColumn width={11}>
                   <ItemGroup divided>
                       <Item>
