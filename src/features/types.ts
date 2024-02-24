@@ -16,6 +16,14 @@ type modalState = {
     dimmer: string
 }
 
-type SidebarProps = {
+type navbarState = {
+    authenticated: boolean
+}
+
+type NavBarProps = {
+    loggedIn: boolean,
+}
+
+type SideBarProps = {
     visible: boolean,
 }

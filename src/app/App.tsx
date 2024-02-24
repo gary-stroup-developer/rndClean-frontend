@@ -1,14 +1,12 @@
 import './App.css'
-// import LandingPage from './pages/LandingPage'
-import UserDashboard from './pages/UserDashboard'
+import Invoices from './pages/Invoices';
 
 function App() {
 
   return (
-    <>
-      
-      <UserDashboard />
-    </>
+    <div className='flex'>
+      <Invoices />
+    </div>
   )
 }
 

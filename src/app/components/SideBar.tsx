@@ -1,20 +1,18 @@
-import { useState } from "react"
+
 import { Icon, Menu, MenuItem, Sidebar } from "semantic-ui-react"
 
 
-const SideBar = ({ visible }: SidebarProps) => {
+const SideBar = ({ visible }: SideBarProps) => {
     //need to use reducer to dispatch state
-    const [hide, setHide] = useState(visible);
   return (
       <div className="ui one column grid">
           <Sidebar
               as={Menu}
               animation='push'
               icon='labeled'
-              onHide={() => setHide(false)}
               inverted
               vertical
-              visible={hide}
+              visible={visible}
               width='thin'
           >
               <MenuItem as='a'>

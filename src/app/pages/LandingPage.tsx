@@ -11,8 +11,8 @@ import { useFormik } from 'formik';
 import ModalDimmer from '../components/ModalDimmer';
 import { useAppDispatch, useAppSelector } from '../../store/store';
 import { openModal } from '../../features/modal';
-import LandingPageNav from '../components/LandingPageNav';
-import { useEffect, useState} from 'react';
+import WindowResize from '../hooks/WindowResize';
+import NavBar from '../components/NavBar';
 
 
 
@@ -28,32 +28,18 @@ const LandingPage = () => {
             dispatch(openModal("blurring"))
         }
     });
-    const [windowSize, setWindowSize] = useState(getWindowSize());
+    
     const { open, dimmer } = useAppSelector(state => state.modal);
+    const { authenticated } = useAppSelector(state => state.navbar);
     const dispatch = useAppDispatch();
 
-    function getWindowSize() {
-        const { innerWidth, innerHeight } = window;
-        return { innerWidth, innerHeight };
-    }
-
-    useEffect(() => {
-        function handleWindowResize() {
-            setWindowSize(getWindowSize());
-        }
-
-        window.addEventListener('resize', handleWindowResize);
-
-        return () => {
-            window.removeEventListener('resize', handleWindowResize);
-        };
-    }, []);
+    const windowSize = WindowResize();
 
     return (
         <>
-            <LandingPageNav />
+            <NavBar loggedIn={authenticated} />
             <ModalDimmer open={open} dimmer={dimmer} username={formik.values.username} password={formik.values.password} / >
-            <Segment style={{marginTop:"10rem", padding: "5rem 2rem"}} placeholder>
+            <Segment style={{ marginTop: "10rem", padding: "5rem 2rem" }} placeholder>
                 <Grid columns={2} relaxed='very' stackable>
                     <GridColumn>
                         <Form onSubmit={formik.handleSubmit}>

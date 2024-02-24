@@ -6,3 +6,16 @@
   padding: 2rem;
   text-align: center;
 }
+
+body, html {
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.filterOption:hover {
+  background-color: teal;
+  color: white;
+}
