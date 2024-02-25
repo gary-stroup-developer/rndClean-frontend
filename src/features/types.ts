@@ -3,6 +3,16 @@ type formValues = {
     username: string
     password: string
 }
+
+type makePaymentFormValues = {
+    fullname: string
+    cardNumber: string
+    address: string
+    city: string
+    state: string
+    amount: number
+    paymentDate: string
+}
 // this describes the Props passed into the ModalDimmer component for initial Redux and Formik tetsing
 type ModalProps = {
     username: string,
